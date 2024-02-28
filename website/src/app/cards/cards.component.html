@@ -1,0 +1,19 @@
+<section>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4" *ngFor="let h of phone">
+            <div class="col">
+                <div class="card">
+                    <img [src]="h.src" [alt]="h.alt">
+                    <div class="card-title">
+                        <h1>{{h.title}}</h1>
+                    </div>
+                    <div class="card-description">
+                        <p>{{h.description}}</p>
+                        <button class="btn btn-outline-primary">{{h.button}}</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

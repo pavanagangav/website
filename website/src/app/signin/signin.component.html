@@ -1,0 +1,12 @@
+<form [formGroup]="signin">
+    <input type="email" placeholder="email" name="email" formControlName="email">
+    <small *ngIf="signin.get('email')?.hasError('required') && signin.get('email')?.touched">enter the proper email</small>
+    <small *ngIf="signin.get('email')?.hasError('maxLength') && signin.get('email')?.touched">check the maxlength</small>
+    <small *ngIf="signin.get('email')?.hasError('minLength') && signin.get('email')?.touched">check the minlength</small>
+    <small *ngIf="signin.get('email')?.hasError('email') && signin.get('email')?.touched">check the minlength</small>
+    <input type="password" placeholder="password" name="password" formControlName="password">
+    <small *ngIf="signin.get('password')?.hasError('required') && signin.get('password')?.touched">check the password</small>
+    <small *ngIf="signin.get('password')?.hasError('maxLength') && signin.get('password')?.touched">check the maxlength</small>
+    <small *ngIf="signin.get('password')?.hasError('minLength') && signin.get('password')?.touched">check the minlength</small>
+    <button type="submit">click here</button>
+</form>
